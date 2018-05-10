@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe" />
+
+    <RadioGroup
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/title"
+        android:id="@+id/group"
+        android:tag="Play with:">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend"
+            android:focusedByDefault="true"
+            android:text="2 Players"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bot"
+            android:text="Bot"/>
+    </RadioGroup>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/group"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="play"
+            android:onClick="startPressed"/>
+
+        <Button
+            android:id="@+id/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="images"
+            android:layout_toRightOf="@id/play"
+            android:onClick="iconPressed"/>
+
+        <Button
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="board size"
+            android:layout_toRightOf="@id/icons"
+            android:onClick="sizePressed"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons"
+        android:id="@+id/score">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/line1">
+
+            <TextView
+                android:id="@+id/ta"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="75dp"
+                android:layout_height="wrap_content"
+                android:text="Player 1:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="75dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ta"
+                android:id="@+id/tb"/>
+
+            <TextView
+                android:id="@+id/tc"
+                android:layout_below="@+id/ta"
+                android:layout_marginTop="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2:"/>
+
+            <TextView
+                android:layout_below="@id/tb"
+                android:layout_marginTop="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tc"
+                android:id="@+id/td"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </RelativeLayout>
